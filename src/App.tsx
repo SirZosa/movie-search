@@ -38,10 +38,14 @@ function App() {
     <header>
       <h1>Movie Search</h1>
       <form onSubmit={handleSubmit}>
-        <input className='search-input' type="text" placeholder='Avengers, Spiderman, etc...' onChange={handleChange}/>
-        <button>Search</button>
-        <label htmlFor="filter">Sort by title</label>
-        <input type="checkbox" name='filter' onChange={handleSort}/>
+        <div className="input-search">
+          <input className='search-input' type="text" placeholder='Avengers, Spiderman, etc...' onChange={handleChange}/>
+          <button>Search</button>
+        </div>
+        <div className="sort-input">
+          <label htmlFor="filter">Sort by title</label>
+          <input type="checkbox" name='filter' onChange={handleSort}/>
+        </div>
       </form>
       {error && <p style={{ color: 'red' }}>{error}</p>}
     </header>
